@@ -120,7 +120,7 @@ jobs:
       with:
         script: |
           let encapped-file: encap [%main.reb {Rebol [] print "Hello Encap"}]
-          if system/version/4 <> 3 [  ; Not Windows (EXE is automatically run)
+          if system.version.4 <> 3 [  ; Not Windows (EXE is automatically run)
               ;
               ; !!! Note: /SHELL doesn't seem to handle BLOCK! arguments on
               ; POSIX.  Currently the REDUCE is necessary...GROUP!s should likely
